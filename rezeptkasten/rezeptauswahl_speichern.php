@@ -5,15 +5,6 @@ $wahlFile = __DIR__ . '/../listen/rezeptwahl.json';
 $zutatenFile = __DIR__ . '/../listen/aktuell.json';
 $produkteFile = __DIR__ . '/../produkte/produktliste.json';
 
-// Hilfsfunktion: Hole Standard-Status ("ja"/"nein") aus Produktliste
-function getStandardStatus($id, $produktliste) {
-    foreach ($produktliste as $produkt) {
-        if (isset($produkt['id']) && (string)$produkt['id'] === (string)$id) {
-            return (isset($produkt['standard']) && $produkt['standard'] === "ja") ? "ja" : "nein";
-        }
-    }
-    return "nein";
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents('php://input');
@@ -42,6 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!is_array($produktliste)) $produktliste = [];
     }
 
+    // Build ID → standard-status lookup map for O(1) access instead of O(n) linear search
+    $produktStatusById = [];
+    foreach ($produktliste as $produkt) {
+        if (isset($produkt['id'])) {
+            $produktStatusById[(string)$produkt['id']] = (isset($produkt['standard']) && $produkt['standard'] === "ja") ? "ja" : "nein";
+        }
+    }
+
     // Zutaten aus Rezepten sammeln (key = id|einheit)
     $alleZutaten = [];
     foreach ($rezepte as $file) {
@@ -62,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($eintrag['standard'])) {
                 $standard = $eintrag['standard'] === "ja" ? "ja" : "nein";
             } else {
-                $standard = getStandardStatus($id, $produktliste);
+                $standard = $produktStatusById[(string)$id] ?? "nein";
             }
             if (!isset($alleZutaten[$key])) {
                 $alleZutaten[$key] = [
@@ -81,20 +80,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+    // Build reverse map: product id => keys in $alleZutaten for O(1) lookup
+    $alleZutatenByIdKeys = [];
+    foreach ($alleZutaten as $key => $z) {
+        $alleZutatenByIdKeys[(string)$z['id']][] = $key;
+    }
+
     // Alle Standardprodukte aus produktliste.json sicherstellen
     foreach ($produktliste as $produkt) {
         if (isset($produkt['standard']) && $produkt['standard'] === "ja" && isset($produkt['id'])) {
             $id = $produkt['id'];
             $einheit = isset($produkt['supermarkteinheit']) ? $produkt['supermarkteinheit'] : '';
-            $istSchonDrin = false;
-            foreach ($alleZutaten as &$z) {
-                if ((string)$z['id'] === (string)$id) {
-                    $z['standard'] = "ja"; // Flag immer setzen!
-                    $istSchonDrin = true;
+            $idStr = (string)$id;
+            $istSchonDrin = isset($alleZutatenByIdKeys[$idStr]);
+            if ($istSchonDrin) {
+                foreach ($alleZutatenByIdKeys[$idStr] as $k) {
+                    $alleZutaten[$k]['standard'] = "ja"; // Flag immer setzen!
                 }
-            }
-            unset($z);
-            if (!$istSchonDrin) {
+            } else {
                 $key = $id . '|' . $einheit;
                 $alleZutaten[$key] = [
                     'id' => $id,

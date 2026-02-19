@@ -228,6 +228,9 @@ $heute = date('d.m.Y');
   let recipeCards = [];
   rezepte.forEach(r => recipeCards.push({...r, visible:true}));
 
+  // Map for O(1) slug → card lookup
+  const recipeCardsBySlug = new Map(recipeCards.map(r => [r.slug, r]));
+
   // --- NEU: Random-Order Toggle State ---
   let isRandomOrder = false;
   let prevOrderSlugs = null;      // Reihenfolge VOR Random (nur sichtbare)
@@ -344,7 +347,7 @@ $heute = date('d.m.Y');
     if (selectedSlugs.length === 0) return;
 
     selectedSlugs.forEach(slug => {
-      const card = recipeCards.find(r => r.slug === slug);
+      const card = recipeCardsBySlug.get(slug);
       if (card) {
         const badge = document.createElement('div');
         badge.className = 'auswahl-badge';
@@ -501,8 +504,9 @@ $heute = date('d.m.Y');
         // bestehende Reihenfolge beibehalten, nur unsichtbare entfernen und neue anhängen
         const setNow = new Set(nowVisible);
         randomOrderSlugs = randomOrderSlugs.filter(s => setNow.has(s));
+        const existingSet = new Set(randomOrderSlugs);
         nowVisible.forEach(s => {
-          if (!randomOrderSlugs.includes(s)) randomOrderSlugs.push(s);
+          if (!existingSet.has(s)) randomOrderSlugs.push(s);
         });
       }
     }
@@ -537,8 +541,9 @@ $heute = date('d.m.Y');
         shuffleInPlace(randomOrderSlugs);
       } else {
         randomOrderSlugs = randomOrderSlugs.filter(s => setNow.has(s));
+        const existingSet = new Set(randomOrderSlugs);
         nowVisible.forEach(s => {
-          if (!randomOrderSlugs.includes(s)) randomOrderSlugs.push(s);
+          if (!existingSet.has(s)) randomOrderSlugs.push(s);
         });
       }
     }
