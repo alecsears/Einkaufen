@@ -12,6 +12,7 @@ $heute = date('d.m.Y');
   <style>
     body { padding-top: 80px; background-color: #f5f5f5; font-family: 'Roboto', sans-serif; }
     .sticky-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; border-bottom: 1px solid #ddd; padding: 10px 20px 0 20px; }
+    .btn-outline-dark:hover, .btn-outline-dark:focus { background-color: #6c757d; border-color: #6c757d; color: #fff; }
     .card-img-top-wrapper { position: relative; height: 100px; width: 100px; cursor: pointer; border-radius: 8px; background: #e9ecef; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.2s; }
     .card-img-top { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.2s; }
     .material-symbols-outlined { font-size: 24px; vertical-align: middle; }

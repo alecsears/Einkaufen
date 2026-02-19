@@ -85,8 +85,8 @@ uasort($vorratsorte, function($a, $b) {
     .autocomplete-suggestion { padding: 8px; cursor: pointer; }
     .autocomplete-suggestion:hover { background-color: #2b2f32; }
     .modal-backdrop.show { opacity:0.9; }
-    .btn-clear { color: #000000; border-color: #000000; }
-    .btn-clear:hover { background: #000000; color: #fff; }
+    .btn-clear { color: #e3e3e3; border-color: #666; }
+    .btn-clear:hover { background: #666; color: #fff; }
     .list-cluster-header {
       display: flex;
       justify-content: space-between;
