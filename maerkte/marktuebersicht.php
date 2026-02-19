@@ -9,17 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <style>
-    /* Optional: etwas konsistenter und touchfreundlicher */
-    .card-link { text-decoration: none; color: inherit; }
-    .logo-wrapper { display:flex; align-items:center; justify-content:center; min-height:110px; }
-    .card { border-radius: 18px; }
-    .card-title { text-align:center; }
     .new-card {
       border: 2px dashed rgba(0,0,0,.25);
       background: rgba(0,0,0,.02);
-      transition: transform .05s ease;
     }
-    .new-card:active { transform: scale(0.99); }
+    .card { aspect-ratio: 1/1; }
   </style>
 </head>
 <body>
@@ -36,7 +30,7 @@
       <!-- NEU: Kachel "Markt anlegen" -->
       <div class="col-md-4 col-sm-6">
         <a href="markt_erstellen.php" class="card-link" title="Neuen Markt anlegen">
-          <div class="card shadow-sm h-100 new-card">
+          <div class="card card-md new-card">
             <div class="logo-wrapper">
               <span class="material-symbols-outlined" style="font-size:64px;color:#4B15DA;">add_business</span>
             </div>
@@ -66,7 +60,7 @@
       ?>
         <div class="col-md-4 col-sm-6">
           <a href="marktdetails.php?markt=<?= urlencode($slug) ?>" class="card-link">
-            <div class="card shadow-sm h-100">
+            <div class="card card-md">
               <div class="logo-wrapper">
                 <?php if ($logo_svg && file_exists(__DIR__ . '/' . $logo_svg)): ?>
                   <?php readfile(__DIR__ . '/' . $logo_svg); ?>

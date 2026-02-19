@@ -46,10 +46,8 @@ foreach ($options as $opt) {
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <style>
      body { padding-top: 72px; background-color: #f5f5f5; font-family: 'Roboto', sans-serif; }
-     .sticky-header { position: fixed; top: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 0.75rem 1.5rem; box-shadow: 0 -2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between; z-index: 1040;  }
-  
-    }
-    
+     .sticky-header { position: fixed; top: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 0.75rem 1.5rem; box-shadow: 0 -2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between; z-index: 1040; }
+    .btn-outline-dark:hover, .btn-outline-dark:focus { background-color: #6c757d; border-color: #6c757d; color: #fff; }
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
       font-size: 48px;
