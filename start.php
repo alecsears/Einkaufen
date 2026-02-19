@@ -19,7 +19,7 @@
   <link rel="manifest" href="/einkauf-app/manifest.json">
 <meta name="theme-color" content="#4B15DA">
 
-  <link href="start.css" rel="stylesheet">
+  <link href="css/start.css" rel="stylesheet">
 </head>
 <body>
   <div class="container py-5">
