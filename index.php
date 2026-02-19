@@ -76,7 +76,7 @@ if (empty($_SESSION['logged_in'])):
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <link href="login.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
   <div class="card card-md p-4 bg-white mx-auto text-center">

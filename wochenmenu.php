@@ -208,8 +208,8 @@ function ladeProduktListe() { return Promise.resolve(window.produktListe); }
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
       <link href="/einkauf-app/rezeptkasten/rezept-modal.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
-      <link href="wochenmenu.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/wochenmenu.css" rel="stylesheet">
     </head>
     <body>
       <div class="sticky-header d-flex align-items-center">
@@ -417,8 +417,8 @@ usort($menu_files, function($a, $b) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="wochenmenu.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/wochenmenu.css" rel="stylesheet">
 </head>
 <body>
   <div class="sticky-header d-flex align-items-center">
