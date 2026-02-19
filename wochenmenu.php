@@ -209,20 +209,7 @@ function ladeProduktListe() { return Promise.resolve(window.produktListe); }
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
       <link href="/einkauf-app/rezeptkasten/rezept-modal.css" rel="stylesheet">
       <link href="style.css" rel="stylesheet">
-      <style>
-        body { padding-top: 72px; background-color: #f5f5f5; font-family: 'Roboto', sans-serif; }
-        .cluster-title { font-size: 1.18rem; font-weight: 600; margin: 1.6rem 0 1rem 0; color: #333; letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.4em; }
-        .kachel { background: #fff; border-radius: 13px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1rem; display: flex; align-items: center; padding: 0.9rem 1.1rem; min-height: 80px; transition: box-shadow 0.2s, border 0.2s, opacity .2s, filter .2s; cursor: pointer; border: 2px solid #e0e0e0; }
-        .kachel:hover { box-shadow: 0 4px 16px rgba(76,175,80,0.05); border: 2px solid #4caf50; }
-        .kachel-img { width: 62px; height: 62px; border-radius: 10px; background: #e9ecef; object-fit: cover; margin-right: 1.1rem; display: flex; align-items: center; justify-content: center; font-size: 44px; color: #bbb; }
-        .kachel-img img { width: 62px; height: 62px; object-fit: cover; border-radius: 10px; }
-        .vegan-icon { color: #4caf50; font-size: 1.3rem; margin-left: 0.3em; vertical-align: middle; }
-        .kachel-title { font-size: 1.15rem; font-weight: 500; margin-bottom: 0; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 260px; }
-        .kachel-actions { margin-left: auto; display: flex; align-items: center; gap: .6rem; }
-        .check-wrap { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; border: 2px solid #e0e0e0; background: #fff; }
-        .check-wrap input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; }
-        .kachel.gegessen { opacity: .55; filter: grayscale(0.95); }
-      </style>
+      <link href="wochenmenu.css" rel="stylesheet">
     </head>
     <body>
       <div class="sticky-header d-flex align-items-center">
@@ -233,7 +220,7 @@ function ladeProduktListe() { return Promise.resolve(window.produktListe); }
 
       <div class="container py-4">
         <h3 class="mb-4"><?=count($rezepte)?> Rezepte vom <?=$wochenmenu_datum?>
-          <?php if($wochenmenu_kw): ?> <span class="text-secondary" style="font-size:.95em; font-weight:400;">(KW <?=$wochenmenu_kw?>)</span><?php endif;?>
+          <?php if($wochenmenu_kw): ?> <span class="text-secondary kw-label">(KW <?=$wochenmenu_kw?>)</span><?php endif;?>
         </h3>
 
         <?php if (empty($rezepte)): ?>
@@ -325,7 +312,7 @@ function ladeProduktListe() { return Promise.resolve(window.produktListe); }
                 html += `<h6>Zubereitung</h6><div>${Array.isArray(json.zubereitung) ? '<ol>' + json.zubereitung.map(s=>'<li>'+s+'</li>').join('') + '</ol>' : json.zubereitung}</div>`;
             }
             if (json.zutaten && json.zutaten.length) {
-                html += `<h6>Zutaten</h6><ul style="list-style-type: disc; padding-left: 1.2em;">`;
+                html += `<h6>Zutaten</h6><ul class="zutaten-liste">`;
                 if (Array.isArray(json.zutaten)) {
                     html += json.zutaten.map(z => `<li class="zutaten-normal">${resolveZutat(z)}</li>`).join('');
                 } else {
@@ -334,7 +321,7 @@ function ladeProduktListe() { return Promise.resolve(window.produktListe); }
                 html += `</ul>`;
             }
             if (json.kalorien) {
-                html += `<div class="mt-2 text-muted" style="font-size:.96em;"><span class="material-symbols-outlined" style="font-size:1em;vertical-align:middle;">local_fire_department</span> ${json.kalorien} kcal</div>`;
+                html += `<div class="mt-2 text-muted kalorien-info"><span class="material-symbols-outlined kalorien-icon">local_fire_department</span> ${json.kalorien} kcal</div>`;
             }
             document.getElementById('modalRezeptBody').innerHTML = html;
             const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
@@ -431,20 +418,7 @@ usort($menu_files, function($a, $b) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <style>
-    .menu-item-wrapper { display: flex; align-items: center; margin-bottom: 1.2rem; }
-    .menu-kachel {
-      background: #fff; border-radius: 13px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      padding: 1.15rem 1.3rem; min-height: 80px; transition: box-shadow 0.2s, border 0.2s;
-      cursor: pointer; border: 2px solid #e0e0e0; font-size: 1.12rem; flex-grow: 1;
-      text-decoration: none; color: #333;
-    }
-    .menu-kachel:hover { box-shadow: 0 4px 16px rgba(76,175,80,0.05); border: 2px solid #4caf50; background: #f7fff6; }
-    .menu-kachel-datum { font-weight: 600; font-size: 1.18em; min-width: 120px; }
-    .menu-kachel-anzahl { margin-left: 1.2em; color: #333; border-radius: 1rem; font-weight: normal; padding: 0.18em 1.3em; font-size: 1em; }
-    .delete-btn { background: transparent; border: none; cursor: pointer; color: #d9534f; font-size: 1.4rem; margin-left: 0.5rem; }
-    .delete-btn:hover { color: #b52b27; }
-  </style>
+  <link href="wochenmenu.css" rel="stylesheet">
 </head>
 <body>
   <div class="sticky-header d-flex align-items-center">
@@ -464,16 +438,15 @@ usort($menu_files, function($a, $b) {
       ?>
       <div class="menu-item-wrapper">
         <a href="?menu=<?=urlencode($basename)?>" class="menu-kachel d-flex justify-content-between align-items-center">
-          <div class="flex-grow-1" style="min-width:0;">
-            <div class="fw-bold" style="font-size:1.28em; color:#212529; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+          <div class="menu-kachel-content flex-grow-1">
+            <div class="fw-bold menu-kachel-kw">
               <?= "KW " . htmlspecialchars($kw ? $kw : "?") ?>
             </div>
-            <div class="menu-kachel-sub" style="color:#868e96; font-size:0.99em; font-weight:400; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+            <div class="menu-kachel-sub">
               <?= htmlspecialchars($datum ? $datum : $basename) ?>
             </div>
           </div>
-          <span class="badge bg-success ms-3 d-flex align-items-center justify-content-center"
-                style="font-size:1.07em; height:2.2em; min-width:2.7em; border-radius:1.1em;">
+          <span class="badge bg-success ms-3 d-flex align-items-center justify-content-center badge-count">
             <?=count($items)?>
           </span>
         </a>

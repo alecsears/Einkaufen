@@ -34,18 +34,7 @@ $anzahl_menues = max(1, (int)($stats['anzahl_menues'] ?? 0)); // Verhindert Divi
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
        <link href="style.css" rel="stylesheet">
-    <style>
-        body { padding-top: 80px; background-color: #f5f5f5; font-family: 'Roboto', sans-serif; }
-        .material-symbols-outlined { font-size: 24px; vertical-align: middle; }
-        .dashboard-kpi { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.6em 1.2em; margin-bottom: 1.2em; display: flex; align-items: center; gap: 1.1em; }
-        .dashboard-kpi .material-symbols-outlined { font-size: 38px; color: #4caf50;}
-        .dashboard-kpi .kpi-label { color: #888; font-size: 1.1em; font-weight: 500;}
-        .dashboard-kpi .kpi-value { font-size: 2.2em; font-weight: bold; margin-bottom: .1em;}
-        .top-rezepte-table th, .top-rezepte-table td { vertical-align: middle; }
-        .top-rezepte-table th { font-size: 1.1em; }
-        .top-rezepte-table td { font-size: 1.06em; }
-        .dashboard-section-title { font-weight: 600; font-size: 1.22em; margin-top: 1.4em; margin-bottom:0.7em; color: #222; }
-    </style>
+    <link href="statistik.css" rel="stylesheet">
 </head>
 <body>
 <div class="sticky-header d-flex align-items-center">
@@ -95,10 +84,10 @@ $anzahl_menues = max(1, (int)($stats['anzahl_menues'] ?? 0)); // Verhindert Divi
         <table class="table table-bordered top-rezepte-table bg-white">
             <thead class="table-light">
                 <tr>
-                    <th style="width:3em;">#</th>
+                    <th class="col-rank">#</th>
                     <th>Rezept</th>
-                    <th style="width:8em;">Häufigkeit</th>
-                    <th style="width:8em;">%</th>
+                    <th class="col-freq">Häufigkeit</th>
+                    <th class="col-pct">%</th>
                 </tr>
             </thead>
             <tbody>
