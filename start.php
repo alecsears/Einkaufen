@@ -19,45 +19,7 @@
   <link rel="manifest" href="/einkauf-app/manifest.json">
 <meta name="theme-color" content="#4B15DA">
 
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
-    }
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-      font-size: 48px;
-      color: #2196F3;
-    }
-    .card-md {
-      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    .card-md:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
-    .icon-gradient {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px; height: 64px;
-  border-radius: 50%;
- background: #4B15DA;
-
-  /* Passe die Farben ggf. an den tatsächlichen SVG-Verlauf an */
-  box-shadow: 0 2px 8px rgba(40,40,40,0.12);
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-.icon-gradient .material-symbols-outlined {
-  color: #23af64;
-  font-size: 28px;
-}
-
-  </style>
+  <link href="start.css" rel="stylesheet">
 </head>
 <body>
   <div class="container py-5">

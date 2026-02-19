@@ -1,0 +1,203 @@
+/* Detail view */
+.cluster-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin: 1.6rem 0 1rem 0;
+  color: #333;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.kachel {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.1rem;
+  min-height: 80px;
+  transition: box-shadow 0.2s, border 0.2s, opacity .2s, filter .2s;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+}
+
+.kachel:hover {
+  box-shadow: 0 4px 16px rgba(76,175,80,0.05);
+  border: 2px solid #4caf50;
+}
+
+.kachel-img {
+  width: 62px;
+  height: 62px;
+  border-radius: 10px;
+  background: #e9ecef;
+  object-fit: cover;
+  margin-right: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #bbb;
+}
+
+.kachel-img img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.vegan-icon {
+  color: #4caf50;
+  font-size: 1.3rem;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+
+.kachel-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.kachel-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.check-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+}
+
+.check-wrap input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.kachel.gegessen {
+  opacity: .55;
+  filter: grayscale(0.95);
+}
+
+.kw-label {
+  font-size: .95em;
+  font-weight: 400;
+}
+
+.zutaten-liste {
+  list-style-type: disc;
+  padding-left: 1.2em;
+}
+
+.kalorien-info {
+  font-size: .96em;
+}
+
+.kalorien-icon {
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+/* Overview */
+.menu-item-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.menu-kachel {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 1.15rem 1.3rem;
+  min-height: 80px;
+  transition: box-shadow 0.2s, border 0.2s;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  font-size: 1.12rem;
+  flex-grow: 1;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-kachel:hover {
+  box-shadow: 0 4px 16px rgba(76,175,80,0.05);
+  border: 2px solid #4caf50;
+  background: #f7fff6;
+}
+
+.menu-kachel-datum {
+  font-weight: 600;
+  font-size: 1.18em;
+  min-width: 120px;
+}
+
+.menu-kachel-anzahl {
+  margin-left: 1.2em;
+  color: #333;
+  border-radius: 1rem;
+  font-weight: normal;
+  padding: 0.18em 1.3em;
+  font-size: 1em;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d9534f;
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.delete-btn:hover {
+  color: #b52b27;
+}
+
+.menu-kachel-content {
+  min-width: 0;
+}
+
+.menu-kachel-kw {
+  font-size: 1.28em;
+  color: #212529;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-kachel-sub {
+  color: #868e96;
+  font-size: 0.99em;
+  font-weight: 400;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-count {
+  font-size: 1.07em;
+  height: 2.2em;
+  min-width: 2.7em;
+  border-radius: 1.1em;
+}
