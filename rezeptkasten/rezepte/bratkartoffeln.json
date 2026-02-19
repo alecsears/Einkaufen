@@ -1,0 +1,40 @@
+{
+  "rezept-id": 140,
+  "name": "Bratkartoffeln mit Bratwurst",
+  "zutaten": [
+    {
+      "id": 335,
+      "rezeptmenge": 2.1,
+      "rezepteinheit": "kg"
+    },
+    {
+      "id": 63,
+      "rezeptmenge": 750,
+      "rezepteinheit": "g"
+    },
+    {
+      "id": 81,
+      "rezeptmenge": 2,
+      "rezepteinheit": "EL"
+    },
+    {
+      "id": 289,
+      "rezeptmenge": 1,
+      "rezepteinheit": "EL"
+    },
+    {
+      "id": 458,
+      "rezeptmenge": 1,
+      "rezepteinheit": "EL"
+    },
+    {
+      "id": 565,
+      "rezeptmenge": 1,
+      "rezepteinheit": "EL"
+    }
+  ],
+  "zubereitung": "B Vorbereitung:\r\n• Kartoffeln je nach Rezept schälen/waschen und schneiden.\r\n• Ofen vorheizen oder Pfanne/Topf bereitstellen.\r\n\r\nB Zubereitung:\r\n1. Kartoffeln garen: kochen, braten oder im Ofen rösten – bis sie weich und/oder knusprig sind.\r\n2. Würzen und ggf. mit Sauce/Belag kombinieren.\r\n\r\nB Servieren:\r\n• Heiß servieren; I Tipp: Für extra Knusper eine große, vorgeheizte Backform verwenden.\r\n",
+  "vegetarisch": "nein",
+  "kalorien": 0,
+  "frequenz": 0
+}

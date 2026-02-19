@@ -1,0 +1,26 @@
+[
+    {
+        "slug": "hamburger",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "kr_uterquark",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "hackfleischschiffchen",
+        "gegessen": "nein"
+    },
+    {
+        "slug": "wei_kohlpfanne",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "kartoffelgratin_einfach",
+        "gegessen": "nein"
+    },
+    {
+        "slug": "poke_bowl",
+        "gegessen": "ja"
+    }
+]

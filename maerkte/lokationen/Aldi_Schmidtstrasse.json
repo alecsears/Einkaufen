@@ -1,0 +1,209 @@
+{
+  "name": "Aldi Schmidtstraße",
+  "abteilungen": [
+    {
+      "name": "Frühstück",
+      "order": 1
+    },
+    {
+      "name": "Schokolade",
+      "order": 3
+    },
+    {
+      "name": "Fruchtgummi",
+      "order": 4
+    },
+    {
+      "name": "Kekse",
+      "order": 5
+    },
+    {
+      "name": "Tee & Kaffee",
+      "order": 6
+    },
+    {
+      "name": "Weine & Spirituosen",
+      "order": 7
+    },
+    {
+      "name": "Bier",
+      "order": 8
+    },
+    {
+      "name": "Haushaltswaren",
+      "order": 9
+    },
+    {
+      "name": "Chips",
+      "order": 10
+    },
+    {
+      "name": "Hygiene & Kosmetik",
+      "order": 11
+    },
+    {
+      "name": "Obst",
+      "order": 12
+    },
+    {
+      "name": "Gemüse",
+      "order": 13
+    },
+    {
+      "name": "Säfte",
+      "order": 14
+    },
+    {
+      "name": "Eier",
+      "order": 15
+    },
+    {
+      "name": "Haltbare Milchprodukte",
+      "order": 16
+    },
+    {
+      "name": "Mehl & Zucker",
+      "order": 17
+    },
+    {
+      "name": "Salz",
+      "order": 18
+    },
+    {
+      "name": "Essig & Öl",
+      "order": 19
+    },
+    {
+      "name": "Nudeln",
+      "order": 20
+    },
+    {
+      "name": "Reis",
+      "order": 21
+    },
+    {
+      "name": "Kartoffelprodukte",
+      "order": 22
+    },
+    {
+      "name": "Antipasti",
+      "order": 23
+    },
+    {
+      "name": "Obstkonserven",
+      "order": 24
+    },
+    {
+      "name": "Gemüsekonserven",
+      "order": 25
+    },
+    {
+      "name": "Sauerkonserven",
+      "order": 26
+    },
+    {
+      "name": "TK-Brot & Kuchen",
+      "order": 27
+    },
+    {
+      "name": "Eis",
+      "order": 28
+    },
+    {
+      "name": "Sonstiges",
+      "order": 29
+    },
+    {
+      "name": "Nüsse",
+      "order": 30
+    },
+    {
+      "name": "Backzutaten",
+      "order": 31
+    },
+    {
+      "name": "TK-Gemüse",
+      "order": 32
+    },
+    {
+      "name": "Fixprodukte",
+      "order": 33
+    },
+    {
+      "name": "Waschen und reinigen",
+      "order": 34
+    },
+    {
+      "name": "Küchenrollen & Tüten",
+      "order": 35
+    },
+    {
+      "name": "Frisches Fleisch",
+      "order": 36
+    },
+    {
+      "name": "Pastasaucen",
+      "order": 37
+    },
+    {
+      "name": "Butter & Margarine",
+      "order": 38
+    },
+    {
+      "name": "Joghurt",
+      "order": 39
+    },
+    {
+      "name": "Internationale Feinkost",
+      "order": 40
+    },
+    {
+      "name": "Gewürze",
+      "order": 41
+    },
+    {
+      "name": "Würzsaucen",
+      "order": 42
+    },
+    {
+      "name": "Käse",
+      "order": 43
+    },
+    {
+      "name": "Fischkonserven",
+      "order": 44
+    },
+    {
+      "name": "Wurstkonserven",
+      "order": 45
+    },
+    {
+      "name": "Wurst im Kühlregal",
+      "order": 46
+    },
+    {
+      "name": "Fertig im Kühlregal",
+      "order": 47
+    },
+    {
+      "name": "TK-Fisch",
+      "order": 48
+    },
+    {
+      "name": "Fisch im Kühlregal",
+      "order": 49
+    },
+    {
+      "name": "Brot",
+      "order": 50
+    },
+    {
+      "name": "Knäckebrot",
+      "order": 51
+    },
+    {
+      "name": "Quengelware",
+      "order": 52
+    }
+  ]
+}

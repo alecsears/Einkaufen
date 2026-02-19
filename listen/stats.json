@@ -1,0 +1,207 @@
+{
+    "rezepte": {
+        "Kräuterquark": {
+            "anzahl": 8
+        },
+        "Currywurst": {
+            "anzahl": 4
+        },
+        "Gyoza": {
+            "anzahl": 3
+        },
+        "Königsberger Klopse": {
+            "anzahl": 1
+        },
+        "Rindersuppe": {
+            "anzahl": 3
+        },
+        "Zwiebelkuchen": {
+            "anzahl": 1
+        },
+        "Nudelsalat": {
+            "anzahl": 2
+        },
+        "Hamburger": {
+            "anzahl": 2
+        },
+        "Weißkohl Blätterteig Quiche": {
+            "anzahl": 1
+        },
+        "Spaghetti Napoli": {
+            "anzahl": 3
+        },
+        "Risotto": {
+            "anzahl": 5
+        },
+        "Gulasch": {
+            "anzahl": 5
+        },
+        "Kartoffelgratin einfach": {
+            "anzahl": 8
+        },
+        "Kartoffelsalat": {
+            "anzahl": 1
+        },
+        "Spätzle": {
+            "anzahl": 2
+        },
+        "Nudelauflauf a la Mama": {
+            "anzahl": 3
+        },
+        "Hackfleisch Tortellini": {
+            "anzahl": 5
+        },
+        "Erbsensuppe": {
+            "anzahl": 2
+        },
+        "Tomatensuppe": {
+            "anzahl": 6
+        },
+        "Macaroni & Cheese": {
+            "anzahl": 5
+        },
+        "Ragout Fin": {
+            "anzahl": 1
+        },
+        "Bulgur Salat": {
+            "anzahl": 2
+        },
+        "Spaghetti Bolognese": {
+            "anzahl": 8
+        },
+        "Linsen mit Spätzle": {
+            "anzahl": 6
+        },
+        "Paprika-reis-gericht": {
+            "anzahl": 1
+        },
+        "Bruschetta": {
+            "anzahl": 1
+        },
+        "Chili con Carne": {
+            "anzahl": 4
+        },
+        "Kokossuppe mit Chiliklösschen": {
+            "anzahl": 3
+        },
+        "Sommerrollen": {
+            "anzahl": 2
+        },
+        "Thunfischcreme": {
+            "anzahl": 3
+        },
+        "Apfelkuchen": {
+            "anzahl": 2
+        },
+        "Paprika-Reis-Gericht": {
+            "anzahl": 8
+        },
+        "Enchiladas": {
+            "anzahl": 4
+        },
+        "Würstchengulasch": {
+            "anzahl": 4
+        },
+        "Gnocchi Spinat Auflauf": {
+            "anzahl": 6
+        },
+        "Kaiserschmarrn": {
+            "anzahl": 1
+        },
+        "Boef Stroganoff": {
+            "anzahl": 3
+        },
+        "Flammkuchen": {
+            "anzahl": 3
+        },
+        "Irish Stew": {
+            "anzahl": 1
+        },
+        "Yakisoba": {
+            "anzahl": 1
+        },
+        "Hackbällchen mit Senfsoße": {
+            "anzahl": 5
+        },
+        "Hot dogs": {
+            "anzahl": 4
+        },
+        "Macaroni mit Ricotta": {
+            "anzahl": 1
+        },
+        "Pfannekuchen mit Hack": {
+            "anzahl": 2
+        },
+        "Pizza": {
+            "anzahl": 2
+        },
+        "Sandwich Toast": {
+            "anzahl": 2
+        },
+        "Bud Spencer Bohnenpfanne": {
+            "anzahl": 4
+        },
+        "Griechische Fladen": {
+            "anzahl": 1
+        },
+        "Blumenkohlsuppe": {
+            "anzahl": 2
+        },
+        "Käsespätzle": {
+            "anzahl": 7
+        },
+        "Kürbissuppe": {
+            "anzahl": 2
+        },
+        "Ragout fin": {
+            "anzahl": 3
+        },
+        "Pulled Pork": {
+            "anzahl": 2
+        },
+        "Russischer Hacktopf": {
+            "anzahl": 1
+        },
+        "Poke Bowl": {
+            "anzahl": 4
+        },
+        "Backofenpommes": {
+            "anzahl": 1
+        },
+        "Belgische Waffeln": {
+            "anzahl": 2
+        },
+        "Hühnergeschnetzeltes": {
+            "anzahl": 1
+        },
+        "Curry Gericht": {
+            "anzahl": 2
+        },
+        "Bratkartoffeln mit Bratwurst": {
+            "anzahl": 1
+        },
+        "Maultaschen": {
+            "anzahl": 2
+        },
+        "Gemüsebratlinge": {
+            "anzahl": 1
+        },
+        "Spaghetti Carbonara": {
+            "anzahl": 1
+        },
+        "Hackfleischschiffchen": {
+            "anzahl": 2
+        },
+        "Weißkohlpfanne": {
+            "anzahl": 1
+        },
+        "Apfelpfannkuchen": {
+            "anzahl": 1
+        },
+        "Butter Chicken": {
+            "anzahl": 1
+        }
+    },
+    "gesamt_anzahl": 120,
+    "anzahl_menues": 192
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "slug": "gem_sebratlinge",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "sp_tzle",
+        "gegessen": "nein"
+    },
+    {
+        "slug": "nudelauflauf_a_la_mama",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "pulled_pork",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "spaghetti_carbonara",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "paprika-reis-gericht",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "tomatensuppe",
+        "gegessen": "ja"
+    },
+    {
+        "slug": "wurstchengulasch",
+        "gegessen": "ja"
+    }
+]

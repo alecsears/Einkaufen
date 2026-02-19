@@ -1,0 +1,209 @@
+{
+  "name": "Rewe Europaviertel",
+  "abteilungen": [
+    {
+      "name": "Obst",
+      "order": 1
+    },
+    {
+      "name": "Gemüse",
+      "order": 2
+    },
+    {
+      "name": "Nüsse",
+      "order": 3
+    },
+    {
+      "name": "Fertig im Kühlregal",
+      "order": 4
+    },
+    {
+      "name": "Fisch im Kühlregal",
+      "order": 5
+    },
+    {
+      "name": "Butter & Margarine",
+      "order": 6
+    },
+    {
+      "name": "Knäckebrot",
+      "order": 7
+    },
+    {
+      "name": "Brot",
+      "order": 8
+    },
+    {
+      "name": "Eier",
+      "order": 9
+    },
+    {
+      "name": "Wurst im Kühlregal",
+      "order": 10
+    },
+    {
+      "name": "Frisches Fleisch",
+      "order": 11
+    },
+    {
+      "name": "Gewürze",
+      "order": 12
+    },
+    {
+      "name": "Schokolade",
+      "order": 13
+    },
+    {
+      "name": "Käse",
+      "order": 14
+    },
+    {
+      "name": "Joghurt",
+      "order": 15
+    },
+    {
+      "name": "Frühstück",
+      "order": 16
+    },
+    {
+      "name": "Kekse",
+      "order": 18
+    },
+    {
+      "name": "Fruchtgummi",
+      "order": 19
+    },
+    {
+      "name": "Tee & Kaffee",
+      "order": 20
+    },
+    {
+      "name": "Reis",
+      "order": 21
+    },
+    {
+      "name": "Internationale Feinkost",
+      "order": 22
+    },
+    {
+      "name": "Fischkonserven",
+      "order": 23
+    },
+    {
+      "name": "Wurstkonserven",
+      "order": 24
+    },
+    {
+      "name": "Nudeln",
+      "order": 25
+    },
+    {
+      "name": "Pastasaucen",
+      "order": 26
+    },
+    {
+      "name": "Backzutaten",
+      "order": 27
+    },
+    {
+      "name": "Mehl & Zucker",
+      "order": 28
+    },
+    {
+      "name": "Kartoffelprodukte",
+      "order": 29
+    },
+    {
+      "name": "Salz",
+      "order": 30
+    },
+    {
+      "name": "Haltbare Milchprodukte",
+      "order": 31
+    },
+    {
+      "name": "Fixprodukte",
+      "order": 32
+    },
+    {
+      "name": "Obstkonserven",
+      "order": 33
+    },
+    {
+      "name": "Gemüsekonserven",
+      "order": 34
+    },
+    {
+      "name": "Sauerkonserven",
+      "order": 35
+    },
+    {
+      "name": "Essig & Öl",
+      "order": 36
+    },
+    {
+      "name": "Würzsaucen",
+      "order": 37
+    },
+    {
+      "name": "Antipasti",
+      "order": 38
+    },
+    {
+      "name": "Weine & Spirituosen",
+      "order": 39
+    },
+    {
+      "name": "Chips",
+      "order": 40
+    },
+    {
+      "name": "TK-Gemüse",
+      "order": 41
+    },
+    {
+      "name": "TK-Fisch",
+      "order": 42
+    },
+    {
+      "name": "TK-Brot & Kuchen",
+      "order": 43
+    },
+    {
+      "name": "Sonstiges",
+      "order": 44
+    },
+    {
+      "name": "Haushaltswaren",
+      "order": 45
+    },
+    {
+      "name": "Küchenrollen & Tüten",
+      "order": 46
+    },
+    {
+      "name": "Waschen und reinigen",
+      "order": 47
+    },
+    {
+      "name": "Hygiene & Kosmetik",
+      "order": 48
+    },
+    {
+      "name": "Eis",
+      "order": 49
+    },
+    {
+      "name": "Säfte",
+      "order": 50
+    },
+    {
+      "name": "Bier",
+      "order": 51
+    },
+    {
+      "name": "Quengelware",
+      "order": 52
+    }
+  ]
+}

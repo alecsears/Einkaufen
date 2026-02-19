@@ -1,0 +1,70 @@
+{
+    "rezept-id": 141,
+    "name": "Bud Spencer Bohnenpfanne",
+    "zutaten": [
+        {
+            "id": 873,
+            "rezeptmenge": 3,
+            "rezepteinheit": "st"
+        },
+        {
+            "id": 82,
+            "rezeptmenge": 2,
+            "rezepteinheit": "st"
+        },
+        {
+            "id": 360,
+            "rezeptmenge": 2,
+            "rezepteinheit": "Ze"
+        },
+        {
+            "id": 834,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Dose(n)"
+        },
+        {
+            "id": 678,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Pä"
+        },
+        {
+            "id": 210,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Dose(n)"
+        },
+        {
+            "id": 773,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Pris"
+        },
+        {
+            "id": 93,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Pris"
+        },
+        {
+            "id": 799,
+            "rezeptmenge": 1,
+            "rezepteinheit": "EL"
+        },
+        {
+            "id": 813,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Pris"
+        },
+        {
+            "id": 36,
+            "rezeptmenge": 1,
+            "rezepteinheit": "st"
+        },
+        {
+            "id": 346,
+            "rezeptmenge": 1,
+            "rezepteinheit": "Dose(n)"
+        }
+    ],
+    "zubereitung": "1. Zwiebeln cabanossi und Knoblauch klein schneiden und anbraten. \r\n2. Tomatenmark hinzufügen. Mit anbraten. \r\n3. Tomaten Dosen hinzufügen. \r\n4. Bohnen und Gewürze hinzufügen. \r\n5. Brot anstellen.",
+    "vegetarisch": "nein",
+    "kalorien": 0,
+    "frequenz": 0
+}

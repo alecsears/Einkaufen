@@ -1,0 +1,337 @@
+[
+    {
+        "id": 11,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 32,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 36,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 41,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 56,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 77,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 89,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Scha"
+    },
+    {
+        "id": 107,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 117,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Bech"
+    },
+    {
+        "id": 119,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 134,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 149,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Dose(n)"
+    },
+    {
+        "id": 156,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 186,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Bech"
+    },
+    {
+        "id": 210,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Dose(n)"
+    },
+    {
+        "id": 219,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 221,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 235,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 267,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 272,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "TP"
+    },
+    {
+        "id": 273,
+        "einkaufslistenmenge": 2,
+        "einkaufslisteneinheit": "Pä"
+    },
+    {
+        "id": 278,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 280,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "TP"
+    },
+    {
+        "id": 289,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 290,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 301,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 314,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 334,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Sack"
+    },
+    {
+        "id": 360,
+        "einkaufslistenmenge": 2,
+        "einkaufslisteneinheit": "Bnd"
+    },
+    {
+        "id": 402,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "st"
+    },
+    {
+        "id": 426,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 431,
+        "einkaufslistenmenge": 2,
+        "einkaufslisteneinheit": "Bech"
+    },
+    {
+        "id": 458,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 460,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 497,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 498,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Sack"
+    },
+    {
+        "id": 508,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 517,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 528,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 533,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 539,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 540,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 550,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 570,
+        "einkaufslistenmenge": 3,
+        "einkaufslisteneinheit": "sta"
+    },
+    {
+        "id": 592,
+        "einkaufslistenmenge": 4,
+        "einkaufslisteneinheit": "st"
+    },
+    {
+        "id": 594,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 639,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 662,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 683,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Bech"
+    },
+    {
+        "id": 706,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "st"
+    },
+    {
+        "id": 709,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Gls"
+    },
+    {
+        "id": 736,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 738,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 752,
+        "einkaufslistenmenge": 0,
+        "einkaufslisteneinheit": "Bech"
+    },
+    {
+        "id": 754,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 775,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 783,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 786,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Tüt"
+    },
+    {
+        "id": 788,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "st"
+    },
+    {
+        "id": 799,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Tub"
+    },
+    {
+        "id": 822,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Beu"
+    },
+    {
+        "id": 838,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 844,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 865,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Fl"
+    },
+    {
+        "id": 867,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "st"
+    },
+    {
+        "id": 869,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Pkg"
+    },
+    {
+        "id": 873,
+        "einkaufslistenmenge": 1,
+        "einkaufslisteneinheit": "Sack"
+    }
+]

@@ -1,0 +1,209 @@
+{
+  "name": "Rewe Griesheim",
+  "abteilungen": [
+    {
+      "name": "Obst",
+      "order": 1
+    },
+    {
+      "name": "Gemüse",
+      "order": 2
+    },
+    {
+      "name": "Nüsse",
+      "order": 3
+    },
+    {
+      "name": "Frühstück",
+      "order": 4
+    },
+    {
+      "name": "Tee & Kaffee",
+      "order": 5
+    },
+    {
+      "name": "Knäckebrot",
+      "order": 7
+    },
+    {
+      "name": "Brot",
+      "order": 8
+    },
+    {
+      "name": "Kekse",
+      "order": 9
+    },
+    {
+      "name": "Säfte",
+      "order": 10
+    },
+    {
+      "name": "Schokolade",
+      "order": 11
+    },
+    {
+      "name": "Fruchtgummi",
+      "order": 12
+    },
+    {
+      "name": "Mehl & Zucker",
+      "order": 13
+    },
+    {
+      "name": "Salz",
+      "order": 14
+    },
+    {
+      "name": "Backzutaten",
+      "order": 15
+    },
+    {
+      "name": "Kartoffelprodukte",
+      "order": 16
+    },
+    {
+      "name": "Pastasaucen",
+      "order": 17
+    },
+    {
+      "name": "Nudeln",
+      "order": 18
+    },
+    {
+      "name": "Reis",
+      "order": 19
+    },
+    {
+      "name": "Fixprodukte",
+      "order": 20
+    },
+    {
+      "name": "Obstkonserven",
+      "order": 21
+    },
+    {
+      "name": "Gemüsekonserven",
+      "order": 22
+    },
+    {
+      "name": "Sauerkonserven",
+      "order": 23
+    },
+    {
+      "name": "Fischkonserven",
+      "order": 24
+    },
+    {
+      "name": "Wurstkonserven",
+      "order": 25
+    },
+    {
+      "name": "Essig & Öl",
+      "order": 26
+    },
+    {
+      "name": "Antipasti",
+      "order": 27
+    },
+    {
+      "name": "Gewürze",
+      "order": 28
+    },
+    {
+      "name": "Würzsaucen",
+      "order": 29
+    },
+    {
+      "name": "Internationale Feinkost",
+      "order": 30
+    },
+    {
+      "name": "Weine & Spirituosen",
+      "order": 31
+    },
+    {
+      "name": "Chips",
+      "order": 32
+    },
+    {
+      "name": "Haltbare Milchprodukte",
+      "order": 33
+    },
+    {
+      "name": "Joghurt",
+      "order": 34
+    },
+    {
+      "name": "Käse",
+      "order": 35
+    },
+    {
+      "name": "Wurst im Kühlregal",
+      "order": 36
+    },
+    {
+      "name": "Eier",
+      "order": 37
+    },
+    {
+      "name": "Butter & Margarine",
+      "order": 38
+    },
+    {
+      "name": "Fertig im Kühlregal",
+      "order": 39
+    },
+    {
+      "name": "Fisch im Kühlregal",
+      "order": 40
+    },
+    {
+      "name": "Frisches Fleisch",
+      "order": 41
+    },
+    {
+      "name": "TK-Gemüse",
+      "order": 42
+    },
+    {
+      "name": "TK-Fisch",
+      "order": 43
+    },
+    {
+      "name": "Sonstiges",
+      "order": 44
+    },
+    {
+      "name": "TK-Brot & Kuchen",
+      "order": 45
+    },
+    {
+      "name": "Eis",
+      "order": 46
+    },
+    {
+      "name": "Waschen und reinigen",
+      "order": 47
+    },
+    {
+      "name": "Hygiene & Kosmetik",
+      "order": 48
+    },
+    {
+      "name": "Haushaltswaren",
+      "order": 49
+    },
+    {
+      "name": "Küchenrollen & Tüten",
+      "order": 50
+    },
+    {
+      "name": "Bier",
+      "order": 51
+    },
+    {
+      "name": "Quengelware",
+      "order": 52
+    }
+  ]
+}

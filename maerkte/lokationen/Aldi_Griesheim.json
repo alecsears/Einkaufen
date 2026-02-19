@@ -1,0 +1,209 @@
+{
+    "name": "Aldi Griesheim",
+    "abteilungen": [
+        {
+            "name": "Gewürze",
+            "order": 1
+        },
+        {
+            "name": "Fixprodukte",
+            "order": 2
+        },
+        {
+            "name": "Gemüse",
+            "order": 3
+        },
+        {
+            "name": "Obst",
+            "order": 4
+        },
+        {
+            "name": "Frisches Fleisch",
+            "order": 5
+        },
+        {
+            "name": "Fertig im Kühlregal",
+            "order": 6
+        },
+        {
+            "name": "Brot",
+            "order": 7
+        },
+        {
+            "name": "Würzsaucen",
+            "order": 8
+        },
+        {
+            "name": "Knäckebrot",
+            "order": 9
+        },
+        {
+            "name": "Tee & Kaffee",
+            "order": 10
+        },
+        {
+            "name": "Frühstück",
+            "order": 11
+        },
+        {
+            "name": "Eier",
+            "order": 12
+        },
+        {
+            "name": "Wurstkonserven",
+            "order": 13
+        },
+        {
+            "name": "Reis",
+            "order": 14
+        },
+        {
+            "name": "Essig & Öl",
+            "order": 15
+        },
+        {
+            "name": "Salz",
+            "order": 16
+        },
+        {
+            "name": "Mehl & Zucker",
+            "order": 17
+        },
+        {
+            "name": "Backzutaten",
+            "order": 18
+        },
+        {
+            "name": "Schokolade",
+            "order": 19
+        },
+        {
+            "name": "Fruchtgummi",
+            "order": 20
+        },
+        {
+            "name": "Kekse",
+            "order": 21
+        },
+        {
+            "name": "Chips",
+            "order": 22
+        },
+        {
+            "name": "Nüsse",
+            "order": 23
+        },
+        {
+            "name": "Bier",
+            "order": 24
+        },
+        {
+            "name": "Weine & Spirituosen",
+            "order": 25
+        },
+        {
+            "name": "Säfte",
+            "order": 26
+        },
+        {
+            "name": "Haushaltswaren",
+            "order": 27
+        },
+        {
+            "name": "Fisch im Kühlregal",
+            "order": 28
+        },
+        {
+            "name": "Wurst im Kühlregal",
+            "order": 29
+        },
+        {
+            "name": "Fischkonserven",
+            "order": 30
+        },
+        {
+            "name": "TK-Fisch",
+            "order": 31
+        },
+        {
+            "name": "Nudeln",
+            "order": 32
+        },
+        {
+            "name": "Kartoffelprodukte",
+            "order": 33
+        },
+        {
+            "name": "Käse",
+            "order": 34
+        },
+        {
+            "name": "Pastasaucen",
+            "order": 35
+        },
+        {
+            "name": "TK-Gemüse",
+            "order": 36
+        },
+        {
+            "name": "Joghurt",
+            "order": 37
+        },
+        {
+            "name": "Butter & Margarine",
+            "order": 38
+        },
+        {
+            "name": "Eis",
+            "order": 39
+        },
+        {
+            "name": "TK-Brot & Kuchen",
+            "order": 40
+        },
+        {
+            "name": "Sonstiges",
+            "order": 41
+        },
+        {
+            "name": "Waschen und reinigen",
+            "order": 42
+        },
+        {
+            "name": "Hygiene & Kosmetik",
+            "order": 43
+        },
+        {
+            "name": "Küchenrollen & Tüten",
+            "order": 44
+        },
+        {
+            "name": "Haltbare Milchprodukte",
+            "order": 45
+        },
+        {
+            "name": "Antipasti",
+            "order": 46
+        },
+        {
+            "name": "Internationale Feinkost",
+            "order": 47
+        },
+        {
+            "name": "Obstkonserven",
+            "order": 48
+        },
+        {
+            "name": "Gemüsekonserven",
+            "order": 49
+        },
+        {
+            "name": "Sauerkonserven",
+            "order": 50
+        },
+        {
+            "name": "Quengelware",
+            "order": 51
+        }
+    ]
+}

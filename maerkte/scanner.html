@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barcode Scan</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 12px; }
+    video { width: 100%; max-width: 520px; border-radius: 12px; background: #111; }
+    button { padding: 10px 14px; font-size: 16px; margin-right: 8px; }
+    #log { margin-top: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Barcode scannen</h2>
+  <button id="startBtn">Scan starten</button>
+  <button id="stopBtn" disabled>Stop</button>
+  <div>
+    <video id="video" playsinline muted></video>
+  </div>
+  <div id="log"></div>
+
+<script>
+'use strict';
+
+const video = document.getElementById('video');
+const log = document.getElementById('log');
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+
+let stream = null;
+let detector = null;
+let rafId = null;
+let lastValue = null;
+let lastSeenAt = 0;
+
+function write(msg) {
+  log.textContent = msg + "\n" + log.textContent;
+}
+
+async function start() {
+  // BarcodeDetector ist nicht überall verfügbar → später könnte man fallback auf ZXing bauen
+  if (!('BarcodeDetector' in window)) {
+    write("BarcodeDetector API nicht verfügbar in diesem Browser. (Fallback über ZXing möglich)");
+    return;
+  }
+
+  detector = new BarcodeDetector({
+    formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128', 'qr_code']
+  });
+
+  stream = await navigator.mediaDevices.getUserMedia({
+    video: { facingMode: { ideal: 'environment' } },
+    audio: false
+  });
+
+  video.srcObject = stream;
+  await video.play();
+
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
+
+  tick();
+}
+
+async function tick() {
+  try {
+    const barcodes = await detector.detect(video);
+
+    if (barcodes && barcodes.length) {
+      const value = barcodes[0].rawValue;
+      const now = Date.now();
+
+      // simples Debounce: gleichen Code nicht dauernd speichern
+      if (value !== lastValue || (now - lastSeenAt) > 2500) {
+        lastValue = value;
+        lastSeenAt = now;
+
+        write(`Gefunden: ${value}`);
+
+        // Speichern am Server
+        const res = await fetch('api_scan_save.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            code: value,
+            ts: new Date().toISOString(),
+            market: 'default' // optional
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data?.error || 'Speichern fehlgeschlagen');
+        write(`Gespeichert. Count: ${data.count}`);
+      }
+    }
+  } catch (e) {
+    write("Fehler: " + e.message);
+  }
+
+  rafId = requestAnimationFrame(tick);
+}
+
+function stop() {
+  if (rafId) cancelAnimationFrame(rafId);
+  rafId = null;
+
+  if (stream) {
+    stream.getTracks().forEach(t => t.stop());
+    stream = null;
+  }
+  startBtn.disabled = false;
+  stopBtn.disabled = true;
+  write("Stopped.");
+}
+
+startBtn.addEventListener('click', start);
+stopBtn.addEventListener('click', stop);
+</script>
+</body>
+</html>
