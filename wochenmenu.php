@@ -151,87 +151,56 @@ if ($menu_selected && preg_match('/^(rezeptwoche_[\d\-]+_\d{2}-\d{2}-\d{2}\.json
     // Produktliste laden (ID → Name)
     $produktliste_path = __DIR__ . '/produkte/produktliste.json';
     $produkte = [];
+    $produktListeJS = [];
     if (file_exists($produktliste_path)) {
         $produkte_roh = json_decode(file_get_contents($produktliste_path), true);
         foreach ($produkte_roh as $k => $v) {
-            if (is_array($v) && isset($v['id']) && isset($v['name'])) {
-                $produkte[$v['id']] = $v['name'];
-            } elseif (is_array($v) && isset($v['id'])) {
-                $produkte[$v['id']] = $k;
-            } elseif (isset($v['id'])) {
-                $produkte[$v['id']] = $k;
+            if (is_array($v) && isset($v['id'])) {
+                $name = isset($v['name']) ? $v['name'] : $k;
+                $produkte[$v['id']] = $name;
+                $produktListeJS[$v['id']] = array_merge($v, ['_name' => $k]);
             }
         }
     }
 
     // Rezeptdaten sammeln (+ gegessen-Flag)
-    // Reihenfolge: erst alle "gegessen = nein", dann "gegessen = ja" (relative Originalreihenfolge bleibt je Gruppe erhalten)
+    // Single pass: load each recipe file once, then sort (nicht gegessen first)
     $rezepte = [];
     $bySlugGegessen = [];
     foreach ($items as $it) {
         $bySlugGegessen[$it['slug']] = ($it['gegessen'] ?? 'nein') === 'ja' ? 'ja' : 'nein';
     }
-    // erst nicht gegessen
+    $idx = 0;
     foreach ($items as $it) {
         $slug = $it['slug'];
         $pfad = __DIR__ . "/rezeptkasten/rezepte/$slug.json";
-        if (file_exists($pfad) && ($bySlugGegessen[$slug] ?? 'nein') === 'nein') {
-            $json = json_decode(file_get_contents($pfad), true);
-            $bild = file_exists(__DIR__ . "/rezeptkasten/bilder/{$slug}.webp") ? "rezeptkasten/bilder/{$slug}.webp" : null;
-            $rezepte[] = [
-                'slug' => $slug,
-                'titel' => $json['name'] ?? $slug,
-                'bild' => $bild,
-                'vegetarisch' => $json['vegetarisch'] ?? '',
-                'json' => $json,
-                'gegessen' => 'nein',
-            ];
-        }
+        if (!file_exists($pfad)) continue;
+        $json = json_decode(file_get_contents($pfad), true);
+        $bild = file_exists(__DIR__ . "/rezeptkasten/bilder/{$slug}.webp") ? "rezeptkasten/bilder/{$slug}.webp" : null;
+        $rezepte[] = [
+            'slug' => $slug,
+            'titel' => $json['name'] ?? $slug,
+            'bild' => $bild,
+            'vegetarisch' => $json['vegetarisch'] ?? '',
+            'json' => $json,
+            'gegessen' => $bySlugGegessen[$slug],
+            '_idx' => $idx++,
+        ];
     }
-    // dann gegessen
-    foreach ($items as $it) {
-        $slug = $it['slug'];
-        $pfad = __DIR__ . "/rezeptkasten/rezepte/$slug.json";
-        if (file_exists($pfad) && ($bySlugGegessen[$slug] ?? 'nein') === 'ja') {
-            $json = json_decode(file_get_contents($pfad), true);
-            $bild = file_exists(__DIR__ . "/rezeptkasten/bilder/{$slug}.webp") ? "rezeptkasten/bilder/{$slug}.webp" : null;
-            $rezepte[] = [
-                'slug' => $slug,
-                'titel' => $json['name'] ?? $slug,
-                'bild' => $bild,
-                'vegetarisch' => $json['vegetarisch'] ?? '',
-                'json' => $json,
-                'gegessen' => 'ja',
-            ];
-        }
-    }
+    // Sort: nicht gegessen first, gegessen last; secondary sort by original order for stability
+    usort($rezepte, fn($a, $b) =>
+        ($a['gegessen'] === 'ja' ? 1 : 0) - ($b['gegessen'] === 'ja' ? 1 : 0)
+        ?: $a['_idx'] - $b['_idx']
+    );
+    foreach ($rezepte as &$r) unset($r['_idx']);
+    unset($r);
     ?>
     <!DOCTYPE html>
     <html lang="de">
     <head>
         <script>
-console.log("Produktlisten-Lader block wird ausgeführt");
-window.produktListe = {};
-async function ladeProduktListe() {
-  console.log("ladeProduktListe wurde aufgerufen");
-  try {
-    const res = await fetch('/einkauf-app/produkte/produktliste.json?ts=' + Date.now());
-    if (res.ok) {
-      console.log("Produktliste wurde geladen");
-      const obj = await res.json();
-      window.produktListe = {};
-      Object.entries(obj).forEach(([name, data]) => {
-        if (data.id !== undefined) window.produktListe[data.id] = { ...data, _name: name };
-      });
-    } else {
-      console.error("Produktliste nicht geladen, Status:", res.status);
-    }
-  } catch (e) {
-    console.error("Fehler beim Laden der Produktliste:", e);
-    window.produktListe = {};
-  }
-}
-ladeProduktListe();
+window.produktListe = <?php echo json_encode($produktListeJS, JSON_UNESCAPED_UNICODE); ?>;
+function ladeProduktListe() { return Promise.resolve(window.produktListe); }
 </script>
       <meta charset="UTF-8">
       <title>Wochenmenü</title>
@@ -376,6 +345,17 @@ ladeProduktListe();
         document.addEventListener('DOMContentLoaded', function() {
           const list = document.getElementById('rezepteListe');
 
+          // Sort helper: nicht gegessen before gegessen
+          function sortKacheln() {
+            const cards = Array.from(list.querySelectorAll('.kachel'));
+            cards.sort((a,b) => {
+              const av = a.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
+              const bv = b.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
+              return av - bv;
+            });
+            cards.forEach(c => list.appendChild(c));
+          }
+
           // Klick auf Karte öffnet Details – aber NICHT, wenn Checkbox geklickt wurde
           list.querySelectorAll('.kachel[data-slug]').forEach(function(el){
               el.addEventListener('click', function(e){
@@ -398,14 +378,8 @@ ladeProduktListe();
               card.classList.toggle('gegessen', value === 'ja');
               card.setAttribute('data-gegessen', value);
 
-              // Sortierung: nicht gegessen nach oben, gegessen ans Ende (Stabilität innerhalb der Gruppen)
-              const cards = Array.from(list.querySelectorAll('.kachel'));
-              cards.sort((a,b) => {
-                const av = a.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
-                const bv = b.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
-                return av - bv; // 0 vor 1
-              });
-              cards.forEach(c => list.appendChild(c));
+              // Sortierung: nicht gegessen nach oben, gegessen ans Ende
+              sortKacheln();
 
               // Persistieren
               const form = new FormData();
@@ -429,13 +403,7 @@ ladeProduktListe();
                 card.classList.toggle('gegessen', back === 'ja');
                 card.setAttribute('data-gegessen', back);
                 // Neu sortieren nach Revert
-                const cards2 = Array.from(list.querySelectorAll('.kachel'));
-                cards2.sort((a,b) => {
-                  const av = a.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
-                  const bv = b.getAttribute('data-gegessen') === 'ja' ? 1 : 0;
-                  return av - bv;
-                });
-                cards2.forEach(c => list.appendChild(c));
+                sortKacheln();
                 alert('Konnte nicht speichern.');
               });
             });
